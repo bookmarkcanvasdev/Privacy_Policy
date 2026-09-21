@@ -1,6 +1,6 @@
 # Privacy Policy — Bookmark Canvas
 
-**Last updated:** July 20, 2026
+**Last updated:** September 21, 2026
 
 This policy describes exactly what Bookmark Canvas does with your
 data. It's written to match the extension's actual code, not a
@@ -14,9 +14,10 @@ login, and no analytics. Everything it stores lives in your own
 browser, on your own device, and is deleted the moment you uninstall
 the extension. The only things that ever leave your device are: (1)
 direct requests to websites you've bookmarked, to fetch a preview
-image, and (2) a request to Google Fonts to load a typeface. Neither
-of those goes through us — there is no "us" the data passes through
-at all.
+image, (2) a request to Google Fonts to load a typeface, and (3)
+your license key, sent to Gumroad to verify a purchase when you
+activate the extension. None of those goes through us — there is no
+"us" the data passes through at all.
 
 ## What the extension can access, and why
 
@@ -46,11 +47,11 @@ Specifically:
 ## Where your data is stored
 
 Everything the extension keeps — your captured screenshots, cached
-preview images, folder colors, sort/theme/layout preferences — is
-stored using Chrome's local, on-device storage (`chrome.storage.local`).
-None of it is synced to a server, none of it is accessible to any
-other extension or website, and none of it survives uninstalling the
-extension.
+preview images, folder colors, sort/theme/layout preferences, and
+your license activation status — is stored using Chrome's local,
+on-device storage (`chrome.storage.local`). None of it is synced to
+a server, none of it is accessible to any other extension or
+website, and none of it survives uninstalling the extension.
 
 Your bookmarks themselves are stored by Chrome's own built-in
 bookmarks system, exactly as they would be without this extension
@@ -72,6 +73,17 @@ something this extension adds or changes.
   loading it works the same way as any website that uses Google
   Fonts, and is subject to Google's own privacy policy for that
   service.
+- **Your license key, when you activate the extension.** Bookmark
+  Canvas requires a one-time purchase, handled entirely by Gumroad.
+  When you enter your license key, it's sent directly to Gumroad's
+  verification API (`api.gumroad.com`) to confirm it's valid and see
+  which tier (Standard or Pro) it unlocks. No other information — no
+  bookmarks, browsing activity, or personal details — is sent along
+  with it. The result (which tier you own) is then stored locally on
+  your device the same way everything else is. Gumroad's handling of
+  your purchase and license key is governed by
+  [Gumroad's own privacy policy](https://gumroad.com/privacy),
+  since that transaction happens on their platform, not ours.
 
 Nothing else leaves your device. There is no analytics, no tracking
 pixel, no crash reporting, and no telemetry of any kind.
@@ -84,16 +96,18 @@ pixel, no crash reporting, and no telemetry of any kind.
   share.
 - We don't track your browsing history or behavior.
 - We don't use your data for advertising.
-- We don't require an account or any personal information to use the
-  extension.
+- We don't require an account to use the extension. Purchasing does
+  require going through Gumroad's checkout, which is between you and
+  Gumroad — we never see your payment details, name, or email; we
+  only ever see whether a license key you enter is valid.
 
 ## Your controls
 
 - **Uninstalling the extension** deletes everything it stored —
-  screenshots, cached previews, preferences — immediately and
-  completely. Your actual bookmarks remain, exactly as they were,
-  since those belong to Chrome's own bookmark system, not the
-  extension.
+  screenshots, cached previews, preferences, and license activation
+  status — immediately and completely. Your actual bookmarks remain,
+  exactly as they were, since those belong to Chrome's own bookmark
+  system, not the extension.
 - **Removing a bookmark or folder** through the extension removes it
   from Chrome's bookmarks the same as doing so through Chrome's own
   bookmark manager would.
