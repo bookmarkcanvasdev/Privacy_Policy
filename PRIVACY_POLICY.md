@@ -1,6 +1,6 @@
 # Privacy Policy — Bookmark Canvas
 
-**Last updated:** September 21, 2026
+**Last updated:** October 5, 2026
 
 This policy describes exactly what Bookmark Canvas does with your
 data. It's written to match the extension's actual code, not a
@@ -11,8 +11,9 @@ change with it.
 
 Bookmark Canvas does not have a server. There is no account, no
 login, and no analytics. Everything it stores lives in your own
-browser, on your own device, and is deleted the moment you uninstall
-the extension. The only things that ever leave your device are: (1)
+browser, on your own device, and is deleted when you uninstall the
+extension (apart from a trial-start timestamp, explained below). The
+only things that ever leave your device are: (1)
 direct requests to websites you've bookmarked, to fetch a preview
 image, (2) a request to Google Fonts to load a typeface, and (3)
 your license key, sent to Gumroad to verify a purchase when you
@@ -51,7 +52,15 @@ preview images, folder colors, sort/theme/layout preferences, and
 your license activation status — is stored using Chrome's local,
 on-device storage (`chrome.storage.local`). None of it is synced to
 a server, none of it is accessible to any other extension or
-website, and none of it survives uninstalling the extension.
+website, and none of it survives uninstalling the extension, with
+one exception described next.
+
+**Trial start date.** To run the 7-day free trial, the extension
+saves a single timestamp (the day you first used it) in Chrome's sync
+storage (`chrome.storage.sync`), so reinstalling doesn't restart the
+trial. If Chrome sync is on, Chrome syncs it through your Google
+account like other synced extension data. It's the only thing the
+extension stores this way, and it isn't sent to us.
 
 Your bookmarks themselves are stored by Chrome's own built-in
 bookmarks system, exactly as they would be without this extension
@@ -103,9 +112,11 @@ pixel, no crash reporting, and no telemetry of any kind.
 
 ## Your controls
 
-- **Uninstalling the extension** deletes everything it stored —
-  screenshots, cached previews, preferences, and license activation
-  status — immediately and completely. Your actual bookmarks remain,
+- **Uninstalling the extension** deletes everything it stored on your
+  device — screenshots, cached previews, preferences, and license
+  activation status — immediately and completely, except the
+  trial-start timestamp described above, which Chrome manages through
+  sync. Your actual bookmarks remain,
   exactly as they were, since those belong to Chrome's own bookmark
   system, not the extension.
 - **Removing a bookmark or folder** through the extension removes it
