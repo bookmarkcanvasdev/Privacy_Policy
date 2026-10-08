@@ -104,9 +104,11 @@ their thumbnails, the last-opened/visited times described above,
 folder colors, and pinned positions. Nothing is uploaded: the file
 goes only where you put it, and the extension never sends it
 anywhere. Because it contains your bookmark links, treat it as you
-would any private file. "Import backup" reads a file you pick, adds
-what it contains for bookmarks that exist on that device, and never
-deletes anything.
+would any private file. "Import backup" reads a file you pick and first shows you a
+summary (how many thumbnails are new, how many would replace older
+ones, how many are kept because you already have newer ones). Only
+after you confirm does it add what the file contains for bookmarks
+that exist on that device. It never deletes anything.
 
 ## What leaves your device
 
