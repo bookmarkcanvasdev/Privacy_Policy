@@ -1,6 +1,6 @@
 # Privacy Policy — Bookmark Canvas
 
-**Last updated:** October 5, 2026
+**Last updated:** October 8, 2026
 
 This policy describes exactly what Bookmark Canvas does with your
 data. It's written to match the extension's actual code, not a
@@ -48,8 +48,10 @@ Specifically:
 ## Where your data is stored
 
 Everything the extension keeps — your captured screenshots, cached
-preview images, folder colors, sort/theme/layout preferences, and
-your license activation status — is stored using Chrome's local,
+preview images, folder colors, sort/theme/layout preferences, the
+times you last opened or visited your bookmarked pages (see "Last
+opened and visited times" below), and your license activation
+status — is stored using Chrome's local,
 on-device storage (`chrome.storage.local`). None of it is synced to
 a server, none of it is accessible to any other extension or
 website, and none of it survives uninstalling the extension, with
@@ -67,6 +69,44 @@ bookmarks system, exactly as they would be without this extension
 installed. If you have Chrome's own sync turned on, your bookmarks
 sync the way they always have — that's Chrome's behavior, not
 something this extension adds or changes.
+
+## Last opened and visited times (the "Rediscover" feature)
+
+"Rediscover" shows you bookmarks you haven't used in a while. To know
+which ones those are, the extension remembers when you last used each
+bookmark:
+
+- **When you open a bookmark from the extension's canvas.**
+- **When you view a page that is one of your bookmarks** (for
+  example by typing its address or following a link). The extension
+  records the time for that page **only if it is currently
+  bookmarked**. Visits to pages that are not bookmarks are not
+  recorded, and no list of other sites you visit is kept.
+- **Chrome's own "last used" time for a bookmark**, which the
+  extension reads from Chrome's bookmarks system when your version of
+  Chrome provides it.
+
+Only a timestamp per bookmarked page is kept (no page content, no
+history of repeated visits). It is stored on your device in
+`chrome.storage.local`, is never sent anywhere, and is deleted when
+you remove the bookmark or uninstall the extension. The extension's
+own background thumbnail refreshes do not count as visits.
+
+## Backup files (Export / Import)
+
+The "Backup Thumbnails" button (bottom-left of the extension) lets you save your thumbnails to a file and load
+them on another device. Exporting is also offered on the screen shown
+when the free trial ends, so your thumbnails are yours to keep whether
+or not you buy. A backup file is created only when you choose
+"Export backup" from that menu (or "Export my thumbnails" on the trial-ended screen), and it is saved by your browser to wherever you
+choose, like any download. It contains your bookmarks' web addresses,
+their thumbnails, the last-opened/visited times described above,
+folder colors, and pinned positions. Nothing is uploaded: the file
+goes only where you put it, and the extension never sends it
+anywhere. Because it contains your bookmark links, treat it as you
+would any private file. "Import backup" reads a file you pick, adds
+what it contains for bookmarks that exist on that device, and never
+deletes anything.
 
 ## What leaves your device
 
@@ -86,7 +126,7 @@ something this extension adds or changes.
   Canvas requires a one-time purchase, handled entirely by Gumroad.
   When you enter your license key, it's sent directly to Gumroad's
   verification API (`api.gumroad.com`) to confirm it's valid and see
-  which tier (Standard or Pro) it unlocks. No other information — no
+  which tier (Standard or Standard + Positioning) it unlocks. No other information — no
   bookmarks, browsing activity, or personal details — is sent along
   with it. The result (which tier you own) is then stored locally on
   your device the same way everything else is. Gumroad's handling of
@@ -103,7 +143,9 @@ pixel, no crash reporting, and no telemetry of any kind.
   to any of your data ourselves.
 - We don't sell or share data, because we don't have any to sell or
   share.
-- We don't track your browsing history or behavior.
+- We don't build a browsing history. The only visit information kept
+  is the last-visited time of pages you have bookmarked, described
+  above, and it never leaves your device.
 - We don't use your data for advertising.
 - We don't require an account to use the extension. Purchasing does
   require going through Gumroad's checkout, which is between you and
