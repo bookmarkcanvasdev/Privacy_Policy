@@ -94,21 +94,31 @@ own background thumbnail refreshes do not count as visits.
 
 ## Backup files (Export / Import)
 
-The "Backup Thumbnails" button (bottom-left of the extension) lets you save your thumbnails to a file and load
-them on another device. Exporting is also offered on the screen shown
-when the free trial ends, so your thumbnails are yours to keep whether
-or not you buy. A backup file is created only when you choose
-"Export backup" from that menu (or "Export my thumbnails" on the trial-ended screen), and it is saved by your browser to wherever you
-choose, like any download. It contains your bookmarks' web addresses,
-their thumbnails, the last-opened/visited times described above,
-folder colors, and pinned positions. Nothing is uploaded: the file
-goes only where you put it, and the extension never sends it
-anywhere. Because it contains your bookmark links, treat it as you
-would any private file. "Import backup" reads a file you pick and first shows you a
-summary (how many thumbnails are new, how many would replace older
-ones, how many are kept because you already have newer ones). Only
-after you confirm does it add what the file contains for bookmarks
-that exist on that device. It never deletes anything.
+The "Backup Thumbnails" button (bottom-left of the extension) lets you
+save your bookmarks and thumbnails to a file and load them on another
+device. Exporting is also offered on the screen shown when the free
+trial ends, so your data is yours to keep whether or not you buy. A
+backup file is created only when you choose "Export backup" from that
+menu (or "Export my thumbnails" on the trial-ended screen), and it is
+saved by your browser to wherever you choose, like any download.
+
+It contains: your bookmarks (their titles, web addresses, folders and
+order), their thumbnails, the last-opened/visited times described
+above, folder colors, and pinned positions. Only web links (http and
+https) are included; other kinds, such as bookmarklets, are left out.
+Nothing is uploaded: the file goes only where you put it, and the
+extension never sends it anywhere. Because it contains your bookmark
+titles and links, treat it as you would any private file.
+
+"Import backup" reads a file you pick and first shows you a summary:
+how many bookmarks and folders would be added, how many are already on
+the device, and how many thumbnails are new, would replace older ones,
+or are kept because you already have newer ones. Only after you
+confirm does it add the missing folders and bookmarks (using Chrome's
+bookmarks permission) and the thumbnails and settings. It never deletes
+or moves anything you already have, skips web addresses you have
+already bookmarked, and ignores anything in the file that is not a
+plain web link.
 
 ## What leaves your device
 
